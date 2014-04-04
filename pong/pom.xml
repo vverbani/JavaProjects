@@ -1,0 +1,7 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>JavaProjects</groupId>
+	<artifactId>pong</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+</project>
