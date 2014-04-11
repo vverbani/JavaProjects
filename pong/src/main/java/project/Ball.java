@@ -1,36 +1,17 @@
 package pong;
 
-/*
-02
- * This is the Ball class
-03
- */
-
- 
-
 public class Ball{
 
-    //variables for the x and y position
-
+    //variables for the x and y positio
     private int xPos,yPos;
-
-    //the direction of the x and y position. Dy is set to -5 because,
-
-    //remeber that the applet "grid" has it's (0, 0) orgin at the
-
-    //top lefthand corner of the applet window. For the mathimatically
-
-    //minded among us, the applet is essentially quadrant IV
 
     public int dx = 5, dy = -5;
 
      
-
+/*
+* Sets ball middle of the screen
+*/
     public Ball(){
-
-      //sets the initial ball position to near the center of the
-
-        //screen
 
         setPos(250, 140);
 

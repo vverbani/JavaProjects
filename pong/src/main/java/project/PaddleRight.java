@@ -1,13 +1,4 @@
 package pong;
-/*
-02
- * PaddleRight has essentially the same set up as the human-controlled
-03
- * paddle except that it uses the y position of the ball to determine
-04
- * the paddle location instead of using a mouseMovement listener
-05
- */
 
 public class PaddleRight{
 
