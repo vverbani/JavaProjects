@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.0">
+  <help_text/>
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>88</x>
+      <y>400</y>
+      <w>168</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Grade
+--
+- private Deliverable title;
+- private double grade;
+--
++ getGrade() : double
++ getDeliverable(); : Deliverable
++ setTitle(Deliverable title);
++ setGrade(double grade);
++ toString(); : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>376</x>
+      <y>152</y>
+      <w>344</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>Course
+--
+- private String courseCode;
+- private String courseTitle;
+- private String courseTerm;
+- private ArrayList&lt;Student&gt; students;
+- private ArrayList&lt;Deliverable&gt; Deliverables;
+--
++ getCourseCode(); : String
++ getCourseTitle(); : String
++ getCourseTerm(); : String
++ setCourseCode(String code);
++ setCourseTitle(String title);
++ setCourseTerm(int course);
++ addDeliverable(String name, String type, double weight);
++ addStudent(String fname, String lname, int snumber, String email);
++ removeDeliverable(String dname);
++ removeStudent(String fname, String lname);
+*+ getDeliverable(); : ArrayList&lt;Deliverable&gt;*
+*+ getStudents(); : ArrayList&lt;Student&gt;*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>800</x>
+      <y>160</y>
+      <w>216</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Student
+--
+- private String firstName;
+- private String lastName;
+- private int studentNumber;
+- private String emailAddress;
+- private ArrayList&lt;Grades&gt; grades;
+
+--
++ getFirstName(); : String
++ getLastName(); : String
++ getEmailAddress(); : String
++ getStudentNumber(); : int
++ setFirstName(String firstName);
++ setLastName(String lastName);
++ setStudentNumber(int studentNumber);
++ setEmailAddress(String emailAddress);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>32</x>
+      <y>152</y>
+      <w>264</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Deliverable
+--
+- private String name;
+- private String type;
+- private double weight;
+*- private ArrayList&lt;Grade&gt; grades;*
+--
++ getName(); : String
++ getType(); : String
++ getWeight(); : double
+
++ setName(String name);
++ setType(String type);
++ setWeight(double weight);
++ toString(); : String
+*+ addGrades(double grade, Deliverable title);*
+*+ removeGrade(double grade, Deliverable title);*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>768</x>
+      <y>104</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>AddStudent</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>400</x>
+      <y>96</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>EditCourse</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>504</x>
+      <y>96</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>DeleteCourse</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>856</x>
+      <y>104</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>EditStudent</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>416</x>
+      <y>96</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>520</x>
+      <y>96</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>784</x>
+      <y>104</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>872</x>
+      <y>104</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>608</x>
+      <y>96</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>AddCourse</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>624</x>
+      <y>96</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>944</x>
+      <y>104</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>DeleteStudent</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>960</x>
+      <y>104</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>496</x>
+      <y>56</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>GradeBookUI</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>136</x>
+      <y>328</y>
+      <w>44</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*0..1*
+m2=*0..**
+</panel_attributes>
+    <additional_attributes>24;72;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>696</x>
+      <y>248</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*0..**
+m2=*0..1*
+</panel_attributes>
+    <additional_attributes>24;24;104;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>272</x>
+      <y>232</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*0..1*
+m2=*0..**
+</panel_attributes>
+    <additional_attributes>24;24;104;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>520</x>
+      <y>56</y>
+      <w>40</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;40;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>416</x>
+      <y>40</y>
+      <w>96</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24;80;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>624</x>
+      <y>40</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>568</x>
+      <y>40</y>
+      <w>344</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>328;64;328;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>112</x>
+      <y>96</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>*AddDeliverable*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>96</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>*EditDeliverable*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>216</x>
+      <y>96</y>
+      <w>112</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>*DeleteDeliverable*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>128</x>
+      <y>40</y>
+      <w>328</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24;312;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>224</x>
+      <y>40</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>32</x>
+      <y>40</y>
+      <w>136</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24;120;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>224</x>
+      <y>96</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>128</x>
+      <y>96</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>32</x>
+      <y>96</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>872</x>
+      <y>40</y>
+      <w>128</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>112;64;112;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>784</x>
+      <y>40</y>
+      <w>40</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;64;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>448</x>
+      <y>432</y>
+      <w>192</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>*Updates are in bold*</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,3 @@
+This is a SECOND year built program for the cs2212- Introduction to Software Engineer.
+It is also a TEAM built program. It is a GUI gradebook for teachers. 
+This program has also been run only from the git/windows command prompt rather than from an IDE.

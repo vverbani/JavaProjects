@@ -1,0 +1,121 @@
+	<project>
+		<modelVersion>4.0.0</modelVersion>
+		<groupId>team6</groupId>
+		<artifactId>team6-gradebook</artifactId>
+		<packaging>jar</packaging>
+		<version>1.0-SNAPSHOT</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			</dependency>
+
+		<dependency>
+			<groupId>net.sf.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>2.3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>5.5.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+        
+        <dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>1.5.4</version>
+			<scope>test</scope>
+		</dependency>
+        
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>1.5.4</version>
+			<scope>test</scope>
+		</dependency>
+        
+	</dependencies>
+
+	<build>
+		<plugins>
+		<plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+      <version>0.6.4.201312101107</version>
+      <executions>
+        <execution>
+          <id>pre-unit-test</id>
+          <goals>
+            <goal>prepare-agent</goal>
+          </goals>
+        </execution>
+        <execution>
+          <id>post-unit-test</id>
+          <phase>test</phase>
+          <goals>
+            <goal>report</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version> 2.4 </version>
+		<configuration>
+		<archive>
+		<manifest>
+			<mainClass>team6.App</mainClass>
+		</manifest>
+		</archive>
+		</configuration>
+		</plugin>
+
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-assembly-plugin</artifactId>
+			<version>2.4</version>
+		<configuration>
+		<descriptorRefs>
+			<descriptorRef>jar-with-dependencies</descriptorRef>
+		</descriptorRefs>
+		<archive>
+		<manifest>
+			<mainClass>team6.App</mainClass>
+		</manifest>
+		</archive>
+		</configuration>
+		
+		<executions>
+		<execution>
+			<phase>package</phase>
+		<goals>
+			<goal>single</goal>
+		</goals>
+		</execution>
+		</executions>
+		</plugin> 
+	</plugins>
+	</build>
+
+	<properties>
+		<maven.compiler.source>7</maven.compiler.source>
+		<maven.compiler.target>7</maven.compiler.target>
+	</properties>
+	</project>

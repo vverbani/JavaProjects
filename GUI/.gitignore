@@ -1,0 +1,12 @@
+*.class
+*.DS_Store
+target/
+*.dat
+*.html
+*.*~
+*.classpath
+*.project
+*.csv
+/team6/nbproject/private/
+/nbproject/private/
+work.sh
